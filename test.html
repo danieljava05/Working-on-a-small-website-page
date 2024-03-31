@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ts.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body,html{
+        background-color: white;
+        scroll-behavior: smooth;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      position: fixed;
+
+      background-color: white;
+      width: 96%;
+      height: 25px;
+      
+    }
+    .header h1 {
+      color: darkorange;
+      font-family: "Anton", sans-serif;
+      /* rgba(234,244,254,255); */
+      padding-top: 0px;
+    }
+    .ads {
+      display: flex;
+      gap: 30px;
+      /* background-color:  black; */
+      height: 30px;
+      justify-content: space-between;
+      align-content: center;
+      padding-top: 10px;
+      width: auto;
+    }
+    .ads a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      border-bottom: 2px solid black transparent;
+      padding-bottom: 10px;
+      /* transition: 2sec ease-in; */
+    }
+    .ads a:hover {
+      border-bottom: 3px solid darkgrey;
+      padding-bottom: 10px;
+      border-radius: 2px;
+      
+      color: darkorange;
+
+      /* transition :  0.8s; */
+    }
+    .search-box {
+      border: 1px solid gray;
+      border-radius: 15px;
+      display: flex;
+      padding: 5px;
+      justify-content: space-between;
+      width: auto;
+    }
+    .search {
+      border: none transparent;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+      /* padding: 10px; */
+      font-size: 16px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: 30px;
+      outline: none;
+    }
+
+    .search-box button {
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 10px;
+      background-color: gray;
+      font-size: 12px;
+    }
+    .hero{
+      display: flex;
+      padding-top: 150px;
+      padding-bottom: 40px;
+      justify-content: space-evenly;
+      gap: 150px;
+      background-color: rgb(231, 243, 255);
+    }
+    .inner1{
+      margin: 0px;
+      padding: 60px;
+
+       
+    }
+     h5{
+      font-family: 'Arial Narrow Bold', sans-serif ;
+      color: black;
+      font-weight: 10px;
+      
+    }
+    .but1{
+      background-color: rgb(131, 178, 224);
+
+      border-radius: 20px;
+      border: none;
+      width: 160px;
+      height: 35px;
+      color: white;
+      margin-top: 40px;
+    }
+    .but{
+      background-color: transparent;
+      border-radius: 20px;
+      width: 160px;
+      height: 35px;
+      color: black;
+      border: 1px solid darkorange;
+    }
+    .body2{
+      display: flex;
+      justify-content: space-around;
+
+    }
+    .body2 .two{
+      background-color:rgb(231, 243, 255) ;
+      width: 450px;
+      height: 420px;
+      border-radius: 20px;
+    }
+    .body2 .three{
+      background-color:rgb(231, 243, 255) ;
+      width: 450px;
+      height: 420px;
+      border-radius: 20px;
+    }
+    .butt{
+      background-color: transparent;
+      border-radius: 20px;
+      width: 160px;
+      height: 35px;
+      color: black;
+      border: 1px solid darkorange;
+     display: inline-block;
+     margin: 30px;
+     
+    }
+    .butz{
+      background-color: transparent;
+      border-radius: 20px;
+      width: 160px;
+      height: 35px;
+      color: black;
+      border: 1px solid darkorange;
+    }
+    .buttt{
+      background-color: transparent;
+      border-radius: 20px;
+      width: 160px;
+      height: 35px;
+      color: black;
+      border: 1px solid darkorange;
+     display: inline-block;
+     margin-left: 50px;
+     margin-right: 30px;
+     margin-top: 40px;
+    
+
+     
+    }
+    .butzz{
+      background-color: transparent;
+      border-radius: 20px;
+      width: 160px;
+      height: 35px;
+      color: black;
+      border: 1px solid darkorange;
+    }
+    .body3i{
+      background-color: rgb(231, 243, 255);
+      width: 100%;
+      height: 1115px;
+      margin-top: 90px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .i{
+      display: flex;
+      gap: 20px;
+      padding: 40px;
+    }
+    .body3ii{
+      display: flex;
+      gap: 20px;
+      padding-top: 10px;
+      padding-left: 40px;
+    }
+    .in{
+      background-color: rgb(231, 243, 255);
+      width: 70%;
+      height: 200px;
+      margin-left: 45px;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+ 
+
+    
+</style>
+<body>
+  
+    <div class="header">
+        <h1>Dan.com</h1>
+        <div class="ads">
+          <a href="#">Service</a>
+          <a href="#next">Our Products</a>
+          <a href="#next2">News</a>
+          <a href="">Solution</a>
+          <a href="#last-born">About</a>
+        </div>
+        <div class="search-box">
+          <input
+            class="search"
+            type="search"
+            placeholder="Type to search"
+            style="border: none; padding-left: 7px"
+          />
+          <button>Search</button>
+        </div>
+      </div>
+      <div class="hero">
+        <div class="inner1">
+        <h5>3u Tools For Windows</h5>
+        <h1 style="font-family:Impact, Geneva, Tahoma, sans-serif; font-size: 70px;">
+          Using Apple Mobile Device <br>Mangement Tool
+        </h1>
+          
+        <button class="but1">Let's work together</button>
+        <button class="but">Sign In</button>
+        <button class="but">Sign Up</button>
+        </div>
+
+        <div class="inner2">
+          <img src="./img.png" alt="" style="width: 400; height: 400px" />
+        </div>
+      </div>
+      <h1 id="next" style="padding: 80px; text-align: center; font-size: 60px;">Product Download</h1>
+      <div class="body2" >
+
+        <div class="two">
+          <img src="./tweet.png" alt="" style="width: 250; height: 250px ; padding-left: 70px;">
+          <p style=" padding-left: 40px; padding-top: 40px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Fugit nesciunt itaque consequuntur voluptatum.</p>
+          <button id="hi" class="butt">Sign In</button>
+          <button class="butz">Sign Up</button>
+        </div>
+
+
+        <div class="three">
+          <img src="./whatsapp.png" alt="" style="width: 200px; height: 200px ; padding-left: 120px; padding-top: 20px;">
+          <p style=" padding-left: 50px; padding-top: 70px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Fugit nesciunt itaque consequuntur voluptatum.</p>
+          <button class="buttt">Sign In</button>
+          <button class="butzz">Sign Up</button>
+        </div>
+
+      </div>
+
+
+      <div class="body3i" id="next2">
+        <h1 id="nn" style="text-align: center;padding-top: 100px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 90px;">NEWS</h1>
+        <div class="i">
+          <div class="ii" style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com.png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+              border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--127</h5>
+            </div>
+            
+          
+        
+        </div>
+          <div class="iii"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (1).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+               border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--17</h5>
+            </div>
+          
+          </div>
+          <div class="iv"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (2).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+              border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--33</h5>
+            </div>
+          </div>
+          <div class="v"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (3).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+              border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--22</h5>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="body3ii">
+          <div class="vi"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (4).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+              border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--18</h5>
+            </div>
+          </div>
+          <div class="vii"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (5).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+              border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--56</h5>
+            </div>
+          </div>
+          <div class="viii"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (2).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+             border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--78</h5>
+            </div>
+          </div>
+          <div class="ix"  style="background-color:rgb(255, 255, 255) ;width: 300px;height: 350px;border-radius: 20px;">
+            <div class="in">
+              <img src="./pngwing.com (4).png" alt="" style="width: 170; height: 170px ;padding-left: 45px;">
+            </div>
+            <h4 style="text-align: center;padding-top: 20px;">Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. Impedit, corrupti.</h4>
+            <div class="bi" style="display: flex;gap: 10px; justify-content: space-between;justify-items: center;">
+              <button class="bu" style="  background-color: transparent;
+               border-radius: 20px;
+              width: 80px;
+              height: 25px;
+              color: black;
+              border: 1px solid darkorange;
+             
+             margin-left: 10px;
+             
+             margin-top: 30px;">Order</button>
+             <h5 style="padding: 35px;color:darkorange;">Qty-Remaining--56</h5>
+            </div>
+          </div>
+        </div>
+       <a href="#next2" style="text-decoration: none;"> <button id="bb" class="bu" style="   background-color: darkorange;
+               border-radius: 20px;
+              width: 150px;
+              height: 40px;
+              color: black;
+              border: none;
+             display: inline;
+             margin-left: 600px;
+             text-align: center;
+             margin-top: 50px;">More</button></a>
+      </div>
+      <div style="background-color:  rgb(231, 243, 255);margin-top: 90px;
+       width:100%;height: 250px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+       
+       
+       <div id="last-born" style="display: flex; justify-content: space-around;">
+        <div style="display: inline-flex;">
+          <h4 style="color: darkorange;padding-top: 50px;padding-left: 10px;padding-right: 10px;">Connect with us on </h4>
+          <img src="./img.png" alt="" style="width: 20px; height: 20px;padding-top: 50px;">
+         </div>
+          
+          <div style="display: flex; gap:40px;padding-top: 50px; padding-left: 100px;color: darkorange;font-size: 13px;">
+            <h3>About us</h3>
+            <h3>Legal Statement</h3>
+            <h3>Disclaimer</h3>
+          </div>
+          <div>
+            <h3 style="padding-top: 50px;color: darkorange; font-size: 16px;">@dan.com 2020 company</h3>
+          </div>
+       </div>
+
+       <div>
+        <h3 style="text-align: center;width :400px; padding-top: 30px;padding-left: 450px; color :darkorange; font-size: 19px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Inventore aut enim soluta natus, fugit minus ipsam maiores laudantium odit alias?</h3>
+       </div>
+       
+        
+        
+         
+        
+      </div>
+      
+</body>
+</html>
